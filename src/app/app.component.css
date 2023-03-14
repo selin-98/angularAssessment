@@ -1,0 +1,84 @@
+mat-toolbar {
+  width: 100%;
+  background: #004a9f;
+  border-radius: 10px;
+  padding: 16px;
+  margin-left: 16px;
+  color: white;
+}
+
+mat-sidenav {
+  background: #004a9f;
+  margin: 0px;
+  width: 200px;
+  border-right: none;
+  color: white;
+  border-radius: 10px;
+  padding: 16px;
+  text-align: center;
+}
+
+.content {
+  height: calc(100vh - 98px);
+  margin: 10px;
+  border-radius: 10px;
+  padding: 10px;
+
+  display: flex;
+  /*
+  justify-content: center;
+  align-items: center;
+  
+  font-size: 2rem;
+  */
+  color: rgb(0, 0, 0);
+  
+}
+
+mat-sidenav-container {
+  height: calc(100vh - 65px);
+  color: white;
+}
+
+.menu-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 1rem;
+}
+.topmenu-div {
+  width: 100%;
+  justify-content: right;
+  justify-self: right;
+  display: flex;
+}
+.topmenu-button {
+  margin: 5px;
+  display: inline-block ; 
+  font-size: 1rem;
+  
+}
+
+.name {
+  margin-top: 8px;
+  font-weight: normal;
+}
+
+.designation {
+  margin-top: 2px;
+  font-size: 0.7rem;
+  color: lightgrey;
+}
+
+mat-divider {
+  margin-top: 16px;
+  margin-bottom: 16px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.logobg { background-color: white;
+  padding: 10px;}
+
+.logobg img { width: 100px}
+    

@@ -1,0 +1,51 @@
+
+<!-- Employees-->
+<dx-data-grid id="dataGrid" 
+    [dataSource]="dataSource"
+    [allowColumnReordering]="true"
+    [allowColumnResizing]="true"
+    [columnAutoWidth]="true">
+
+    <dxi-column dataField="title"></dxi-column>
+    <dxi-column dataField="firstName" [fixed]="true">
+        <dxi-validation-rule type="required"></dxi-validation-rule>
+    </dxi-column>
+    <dxi-column dataField="lastName" [fixed]="true">
+        <dxi-validation-rule type="required"></dxi-validation-rule>
+    </dxi-column>
+    <dxi-column dataField="Position">
+        <dxi-validation-rule type="required"></dxi-validation-rule>
+    </dxi-column>
+    <dxi-column
+        dataField="birthDate"
+        dataType="date"
+        [width]="100">
+        <dxi-validation-rule type="required"></dxi-validation-rule>
+    </dxi-column>
+    <dxi-column
+        dataField="HireDate"
+        dataType="date"
+        [width]="100">
+        <dxi-validation-rule type="required"></dxi-validation-rule>
+    </dxi-column>
+    
+    <dxi-column dataField="countryCode">
+         <dxi-validation-rule type="required"></dxi-validation-rule>
+    </dxi-column>
+    <dxi-column dataField="address"></dxi-column>
+    
+    <dxo-column-fixing [enabled]="true"></dxo-column-fixing>
+    
+    <dxo-editing
+        mode="popup"
+        [allowUpdating]="true"
+        [allowDeleting]="true"
+        [allowAdding]="true">
+    </dxo-editing>
+
+    <dxo-column-chooser [enabled]="true"></dxo-column-chooser>
+    <dxo-filter-row [visible]="true"></dxo-filter-row>
+    <dxo-search-panel [visible]="true"></dxo-search-panel>
+</dx-data-grid>
+
+
