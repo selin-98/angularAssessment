@@ -1,24 +1,22 @@
-import { Component, Pipe, PipeTransform, enableProdMode } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
-import DataSource from 'devextreme/data/data_source';
-import { Service } from '../app.service';
-import { AppModule } from '../app.module';
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
-import { Employee, EmployeesService } from './employees.service';
+import { EmployeeService } from '../employee.service';
 
 @Component({
   selector: 'app-employees',
   templateUrl: './employees.component.html',
-  styleUrls: ['./employees.component.css'],
-  providers: [Service]
+  styleUrls: ['./employees.component.css']
 })
-export class EmployeesComponent {
-  dataSource: any;
- 
-  constructor(service: EmployeesService) {
-      this.dataSource = service.getEmployees();
+export class EmployeesComponent implements OnInit {
+  dataSource: any = {};
+
+  constructor(private service: EmployeeService) {
+    
   }
+  ngOnInit(): void {
+    this.dataSource = this.service.getDataSource();
   }
+}
 
 //Employees
 
